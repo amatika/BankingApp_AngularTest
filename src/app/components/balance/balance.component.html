@@ -1,0 +1,26 @@
+<div >
+    <app-dashboard></app-dashboard>
+    <div class="container balance-container" style="border:1px solid blue;">
+        <h2>Account Balance</h2>
+        <div class="container mt-4">
+  <form (ngSubmit)="getBalance()" class="card p-2">
+    <div class="mb-3">
+      <label for="customerId" class="form-label">Customer ID</label>
+      <input 
+        type="text" 
+        id="customerId" 
+        class="form-control" 
+        [(ngModel)]="customerId" 
+        name="customerId" 
+        required>
+    </div>
+    <button type="submit" class="btn btn-primary">Get Balance</button>
+  </form>
+
+  <div *ngIf="balance !== undefined" class="mt-3 card p-1 text-center">
+    <h4>Balance: {{ balance }}</h4>
+  </div>
+</div>
+
+    </div>
+</div>

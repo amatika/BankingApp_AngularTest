@@ -1,0 +1,51 @@
+<div>
+  <app-dashboard></app-dashboard>
+  <div class="container mt-4" style="border:1px solid blue;">
+    <form (ngSubmit)="loadTransactions()">
+      <div class="mb-3">
+        <label for="customerId" class="form-label">Customer ID</label>
+        <input 
+          type="text" 
+          id="customerId" 
+          class="form-control" 
+          [(ngModel)]="customerId" 
+          name="customerId" 
+          required>
+      </div>
+      <button type="submit" class="btn btn-primary">Get Mini-Statement</button>
+    </form>
+  
+    <div  class="mt-4">
+      <h3>Mini-Statement</h3>
+      <input
+          type="text"
+          class="form-control mb-3"
+          placeholder="Search by Transaction ID"
+          [(ngModel)]="searchText"
+        />
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Transaction ID</th>
+            <th>Type</th>
+            <th>Amount</th>
+            <th>Description</th>
+            <th>Timestamp</th>            
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let transaction of transactions">
+            <td>{{ transaction.id }}</td>
+            <td>{{ transaction.transactionId }}</td>
+            <td>{{ transaction.type }}</td>
+            <td>{{ transaction.amount }}</td>
+            <td>{{ transaction.description }}</td>
+            <td>{{ transaction.date }}</td>            
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+</div>

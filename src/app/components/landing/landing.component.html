@@ -1,0 +1,28 @@
+<div>
+  <app-navbar></app-navbar> 
+  <div class="container-fluid">
+    <!-- Main Section -->
+    <div class="main-section container ">
+      <!-- Image -->
+      <img src="assets/images/money1.jpg" alt="Banking Image" class="main-image img-responsive container">
+    
+      <div class="services-section">
+        <div class="text-center" ><h1>Our Services</h1></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3" *ngFor="let service of services">
+                <div class="card">
+                    <img [src]="service.imageUrl" class="card-img-top" alt="{{ service.title }}">
+                    <div class="card-body">
+                      <h5 class="card-title">{{ service.title }}</h5>
+                      <p class="card-text">{{ service.description }}</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <app-footer></app-footer>
+</div>
