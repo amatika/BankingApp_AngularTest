@@ -36,6 +36,6 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 ```
 ## Screenshots
 
-![Landing Page](src/assets/images/landing.png)
+![Landing Page](src/assets/images/landin.PNG)
 
 
