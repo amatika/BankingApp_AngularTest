@@ -37,10 +37,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 ## Screenshots
 
 ![Landing Page](src/assets/images/landing.png)
-<p align="center"><em>The landing page </em></p>
 
 ![Login Page](src/assets/images/login.png)
-<p align="center"><em>The login page </em></p>
 
 ![Register Page](src/assets/images/register.png)
-<p align="center"><em>The register page </em></p>
